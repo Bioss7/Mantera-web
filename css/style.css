@@ -10700,6 +10700,7 @@ body {
 
 .assets__item {
     text-align: center;
+    height: 100%;
 }
 
 .assets__item--bg {
