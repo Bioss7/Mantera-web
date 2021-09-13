@@ -1,11 +1,9 @@
-@charset "UTF-8";
-
 @font-face {
     font-family: 'Lab Grotesque';
-  src: url("LabGrotesque-ThinItalic.eot");
-  src: local("Lab Grotesque Thin Italic"), local("LabGrotesque-ThinItalic"), url("LabGrotesque-ThinItalic.eot?#iefix") format("embedded-opentype"), url("LabGrotesque-ThinItalic.woff2") format("woff2"), url("LabGrotesque-ThinItalic.woff") format("woff"), url("LabGrotesque-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
+    src: url("LabGrotesque-ThinItalic.eot");
+    src: local("Lab Grotesque Thin Italic"), local("LabGrotesque-ThinItalic"), url("LabGrotesque-ThinItalic.eot?#iefix") format("embedded-opentype"), url("LabGrotesque-ThinItalic.woff2") format("woff2"), url("LabGrotesque-ThinItalic.woff") format("woff"), url("LabGrotesque-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
 }
 
 @font-face {
@@ -9930,6 +9928,8 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .img-w95 {
@@ -10225,7 +10225,7 @@ body {
 .section-title--facts::after {
     content: "";
     width: 2px;
-    height: 428px;
+    height: 500px;
     background-color: #797979;
     position: absolute;
     top: 5px;
@@ -10394,6 +10394,8 @@ body {
     display: block;
     max-width: 100%;
     height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 @media (max-width: 767px) {
@@ -10493,6 +10495,8 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .solutions {
@@ -10665,10 +10669,23 @@ body {
 }
 
 .assets {
-    padding-top: 80px;
+    padding-top: 125px;
+}
+
+@media (max-width: 1199px) {
+    .assets .row > div {
+        margin-bottom: 3rem;
+    }
 }
 
 @media (max-width: 992px) {
+    .assets-row {
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 1199px) {
     .assets-row {
         -ms-flex-pack: center !important;
         justify-content: center !important;
@@ -10689,25 +10706,6 @@ body {
     position: relative;
 }
 
-.assets__item--bg::after {
-    content: "";
-    display: block;
-    width: 295px;
-    height: 654px;
-    background-color: #f8f7f4;
-    position: absolute;
-    top: 0;
-    left: -25px;
-    z-index: -1;
-}
-
-@media (max-width: 992px) {
-    .assets__item--bg::after {
-        width: 420px;
-        height: 600px;
-    }
-}
-
 .assets__link {
     text-decoration: none;
     color: inherit;
@@ -10715,6 +10713,62 @@ body {
 
 .assets__link:hover {
     text-decoration: none;
+}
+
+.assets__link:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 655px;
+    background-color: #f8f7f4;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .assets__link:hover::after {
+        width: 420px;
+        height: 600px;
+    }
+}
+
+.assets__link--first:hover {
+    text-decoration: none;
+}
+
+.assets__link--first:hover::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 654px;
+    position: absolute;
+    top: -35px;
+    left: -25px;
+    z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .assets__link--first:hover::after {
+        width: 420px;
+        height: 600px;
+    }
+}
+
+.assets__img-wrapper {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.assets__img-wrapper--fourth {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 45px;
 }
 
 .assets__title {
@@ -10727,27 +10781,41 @@ body {
 }
 
 .assets__title--logo {
-    margin-bottom: 95px;
+    margin-bottom: 115px;
+}
+
+.assets__img {
+    display: block;
+    max-height: 200px;
+    margin: 0 auto;
 }
 
 .assets__img--pt18 {
     padding-top: 18px;
-    position: relative;
-}
-
-.assets__img--pt18::after {
-    content: "Форелевое хотзяйство";
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .assets__img--pt30 {
     padding-top: 30px;
 }
 
-.assets__img--pt36 {
-    padding-top: 36px;
+.assets__img--second {
+    padding-top: 25px;
+}
+
+.assets__logos {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.assets__item--second {
+    padding-top: 40px;
+    padding-bottom: 50px;
 }
 
 .projects {
@@ -10762,6 +10830,14 @@ body {
 
 .projects__item {
     text-align: center;
+}
+
+.projects__item a {
+    text-decoration: none;
+}
+
+.projects__link {
+    text-decoration: none;
 }
 
 .projects-wrapper {
@@ -10855,6 +10931,8 @@ body {
 .media__item img {
     display: block;
     max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .media__video {
