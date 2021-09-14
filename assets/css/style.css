@@ -9731,6 +9731,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9964,6 +9965,13 @@ body {
 
 .page {
     overflow: hidden;
+}
+
+.arrow-up {
+    background-image: url("../images/arrow-up.svg");
+    background-position: center;
+    min-height: 50px;
+    position: fixed;
 }
 
 .header {
@@ -10256,7 +10264,7 @@ body {
 .section-title--contact::after {
     content: "";
     width: 2px;
-    height: 320px;
+    height: 280px;
     background-color: #797979;
     position: absolute;
     top: 5px;
@@ -11025,8 +11033,8 @@ body {
     font-style: normal;
 }
 
-.contact__text:nth-child(3) {
-    margin-bottom: 80px;
+.contact__text:nth-child(2) {
+    margin-bottom: 150px;
 }
 
 .contact__text a {
